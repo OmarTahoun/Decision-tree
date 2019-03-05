@@ -1,5 +1,4 @@
 from __future__ import print_function
-
 data = [
     ['Green', 3, 'Apple'],
     ['Yellow', 3, 'Apple'],
