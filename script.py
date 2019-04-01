@@ -1,13 +1,23 @@
 from __future__ import print_function
+
 data = [
-    ['Green', 3, 'Apple'],
-    ['Yellow', 3, 'Apple'],
-    ['Red', 1, 'Grape'],
-    ['Red', 1, 'Grape'],
-    ['Yellow', 3, 'Lemon'],
+    ['sunny', 'hot', 'high', 'false', 'no'],
+    ['sunny', 'hot', 'high', 'true','no'],
+    ['overcast', 'hot', 'high', 'false','yes'],
+    ['rainy', 'mild', 'high', 'false', 'yes'],
+    ['rainy', 'cool', 'normal', 'false', 'yes'],
+    ['rainy', 'cool', 'normal', 'true', 'no'],
+    ['overcast', 'cool', 'normal', 'true', 'yes'],
+    ['sunny', 'mild', 'high', 'false', 'no'],
+    ['sunny', 'cool', 'normal', 'false', 'yes'],
+    ['rainy', 'mild', 'normal', 'false', 'yes'],
+    ['sunny', 'mild', 'normal', 'true','yes'],
+    ['overcast', 'mild', 'high', 'true', 'yes'],
+    ['overcast', 'hot', 'normal', 'false', 'yes'],
+    ['rainy', 'mild', 'high', 'true', 'no']
 ]
 
-header = ["color", "diameter", "label"]
+header = ["outlook", "temprature", "humidity", "windy", "play"]
 
 
 def unique_values(rows, col):
@@ -115,7 +125,6 @@ class Decision_node:
 def build_tree(rows):
 
     gain, question = best_split(rows)
-
     if gain == 0:
         return Leaf(rows)
 
@@ -160,16 +169,16 @@ def print_leaf(counts):
 my_tree = build_tree(data)
 print_tree(my_tree)
 
-test = [
-    ['Green', 3, 'Apple'],
-    ['Yellow', 4, 'Apple'],
-    ['Red', 2, 'Grape'],
-    ['Red', 1, 'Grape'],
-    ['Yellow', 3, 'Lemon'],
-]
-for row in test:
-    print("Actual: %s. Predicted: %s" %
-          (row[-1], print_leaf(classify(row, my_tree))))
+# test = [
+#     ['Green', 3, 'Apple'],
+#     ['Yellow', 4, 'Apple'],
+#     ['Red', 2, 'Grape'],
+#     ['Red', 1, 'Grape'],
+#     ['Yellow', 3, 'Lemon'],
+# ]
+# for row in test:
+#     print("Actual: %s. Predicted: %s" %
+#           (row[-1], print_leaf(classify(row, my_tree))))
 
 
 # print(best_split(data))
