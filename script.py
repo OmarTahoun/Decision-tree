@@ -1,23 +1,19 @@
 from __future__ import print_function
 
 data = [
-    ['sunny', 'hot', 'high', 'false', 'no'],
-    ['sunny', 'hot', 'high', 'true','no'],
-    ['overcast', 'hot', 'high', 'false','yes'],
-    ['rainy', 'mild', 'high', 'false', 'yes'],
-    ['rainy', 'cool', 'normal', 'false', 'yes'],
-    ['rainy', 'cool', 'normal', 'true', 'no'],
-    ['overcast', 'cool', 'normal', 'true', 'yes'],
-    ['sunny', 'mild', 'high', 'false', 'no'],
-    ['sunny', 'cool', 'normal', 'false', 'yes'],
-    ['rainy', 'mild', 'normal', 'false', 'yes'],
-    ['sunny', 'mild', 'normal', 'true','yes'],
-    ['overcast', 'mild', 'high', 'true', 'yes'],
-    ['overcast', 'hot', 'normal', 'false', 'yes'],
-    ['rainy', 'mild', 'high', 'true', 'no']
+    ['low',     'high',     'high',   'fair',     'no'],
+    ['high',     'high',     'high',   'excellent','no'],
+    ['high',  'high',     'high',   'fair',     'yes'],
+    ['high',    'high',   'low',   'fair',     'yes'],
+    ['high',    'low',      'low',  'fair',     'yes'],
+    ['low',    'low',      'low',  'excellent','no'],
+    ['low',  'high',      'low',  'excellent','yes'],
+    ['low',     'low',   'low',   'fair',     'no'],
+    ['low',     'low',      'high',  'fair',     'yes'],
+    ['high',    'high',   'high',  'fair',     'yes'],
 ]
 
-header = ["outlook", "temprature", "humidity", "windy", "play"]
+header = ["pregnan", "plasma", "triceps", "serum", "buy"]
 
 
 def unique_values(rows, col):
